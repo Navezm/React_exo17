@@ -2,10 +2,15 @@ import React, {useState} from 'react';
 
 let App = () => {
   const [chiffre, setChiffre] = useState({string: 1});
+  increment = () => {
+    this.setState({
+      string: this.string + 1
+    })
+  };
   return (
     <div className="App">
       <span>{chiffre.string}</span> <br/>
-      <button>Click-icé</button>
+      <button onClick={this.increment}>Click-icé</button>
     </div>
   );
 };
