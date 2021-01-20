@@ -1,12 +1,14 @@
 import React, {useState} from 'react';
+import Compo from './Compo';
 
 let App = () => {
-  const [chiffre, setChiffre] = useState(1);
+
+  const [chiffre, setChiffre] = useState(0);
   
   return (
     <div className="App">
       <span>{chiffre}</span> <br/>
-      <button onClick={() => {setChiffre(chiffre+1)}}>Click-icé</button>
+      <Compo fct={(e) => setChiffre(chiffre + e)}/>
     </div>
   );
 };
